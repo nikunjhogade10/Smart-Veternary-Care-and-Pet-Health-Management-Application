@@ -1,0 +1,152 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* New Luxury Palette */
+  --black-deep: #030303;
+  --black-soft: #0A0A0A;
+  --gold-royal: #C9A227;
+  --gold-light: #E5C158;
+  --sapphire: #1E3A8A;
+
+  --text-primary: #0F172A;
+  --text-secondary: #6B7280;
+
+  /* Light mode (clean luxury) */
+  --background: #FAFAF9;
+  --foreground: #0A0A0A;
+
+  --card: #FFFFFF;
+  --card-foreground: #0A0A0A;
+
+  --primary: #0A0A0A;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #1E3A8A;
+  --secondary-foreground: #FFFFFF;
+
+  --accent: #C9A227;
+  --accent-foreground: #0A0A0A;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #6B7280;
+
+  --border: #E5E7EB;
+  --input: #FFFFFF;
+
+  --ring: #C9A227;
+
+  /* Shape system */
+  --radius: 0.75rem;
+
+  /* Shadows (sharper, premium) */
+  --shadow-soft: 0 2px 10px rgba(0,0,0,0.04);
+  --shadow-medium: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Dark mode (main experience) */
+.dark {
+  --background: #030303;
+  --foreground: #F9FAFB;
+
+  --card: #0A0A0A;
+  --card-foreground: #F9FAFB;
+
+  --primary: #F9FAFB;
+  --primary-foreground: #030303;
+
+  --secondary: #1E3A8A;
+  --secondary-foreground: #E0E7FF;
+
+  --accent: #C9A227;
+  --accent-foreground: #030303;
+
+  --muted: #111111;
+  --muted-foreground: #9CA3AF;
+
+  --border: #1A1A1A;
+  --input: #111111;
+
+  --ring: #C9A227;
+}
+
+/* Mapping */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+}
+
+/* Base */
+@layer base {
+  * {
+    @apply border-border outline-ring/40;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  /* Typography: more minimal, sharp */
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  button {
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-soft);
+  }
+
+  input {
+    border-radius: var(--radius);
+    background: var(--input);
+  }
+}

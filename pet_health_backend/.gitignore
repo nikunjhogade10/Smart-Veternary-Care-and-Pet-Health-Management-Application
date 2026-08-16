@@ -1,0 +1,4 @@
+.venv/
+pethealth.db
+uploads/
+.env
