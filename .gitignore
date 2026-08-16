@@ -6,6 +6,7 @@ pet_health_backend/.venv/
 # Build and Output
 dist/
 build/
+.vite/
 
 # Python Cache & Database
 __pycache__/
