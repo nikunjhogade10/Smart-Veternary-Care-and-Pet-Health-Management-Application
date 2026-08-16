@@ -237,7 +237,3 @@ npm run start
 | **Community** | `POST` | `/api/v1/community/posts` | Create new community post |
 
 ---
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
